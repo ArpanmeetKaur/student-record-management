@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Record System</title>
+    <link rel="stylesheet" href="./style.css">    
+</head>
+<body>
+    <div class="container">
+        <h1>Student Record Management System</h1>
+
+        <!-- Student Form Section -->
+        <h2>Add New Student</h2>
+        <form action="/SRMS/students" method="post">
+            <input type="hidden" name="action" value="add">
+            
+            <div class="form-group">
+                <label for="id">Student ID:</label>
+                <input type="number" id="id" name="id" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+  
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+         
+            <div class="form-group">
+                <label for="course">Course:</label>
+                <input type="text" id="course" name="course" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            
+            <button type="submit">Add Student</button>
+        </form>
+
+        <!-- View Students Button -->
+        <form action="/SRMS/students" method="get">
+            <button type="submit">View Students</button>
+        </form>
+    </div>
+</body>
+</html>
